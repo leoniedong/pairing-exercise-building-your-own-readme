@@ -1,0 +1,22 @@
+<% if flash[:error] %>
+  <% flash[:error].each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <% end %>
+<% end %>
+
+<h3>New debt</h3>
+<%= form_for @debt do |f| %>
+<div>
+<%= f.label :name%>
+<%= f.text_field :name%>
+</div>
+<div>
+<%= f.label :amount%>
+<%= f.text_field :amount%>
+</div>
+<div>
+<%= f.label :lannister %>
+<%= f.collection_select :lannister_id, Lannister.all, :id, :name %>
+</div>
+<%= f.submit%>
+<% end %>

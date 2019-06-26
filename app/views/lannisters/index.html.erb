@@ -1,0 +1,6 @@
+<h3>Lannisters</h3>
+<ul>
+<% @lannisters.each do |l| %>
+<li><%= link_to "#{l.name}", lannister_path(l) %></li>
+<% end %>
+</ul>

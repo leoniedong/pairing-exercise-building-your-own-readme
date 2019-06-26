@@ -1,0 +1,7 @@
+<h3>Debt # <%= @debt.id %></h3>
+<%= link_to "#{@debt.lannister.name}", lannister_path(@debt.lannister) %><br>
+owes <br>
+<%= @debt.name %> <br>
+<%= @debt.amount %> Gold Dragons.<br>
+But that's ok, because<br>
+<b>A Lannister always pays his debts.</b>

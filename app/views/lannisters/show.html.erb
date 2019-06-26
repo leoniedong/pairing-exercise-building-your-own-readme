@@ -1,0 +1,12 @@
+<h3><%= @lannister.name %></h3>
+Age: <%= @lannister.age %><br>
+I owe these people money:
+<ul>
+<% @lannister.debts.each do |debt| %>
+<li><%= link_to "#{debt.name}", debt_path(debt) %></li>
+<% end %>
+</ul>
+
+<%= form_tag lannister_path(@lannister), method: :delete do %>
+ <%= submit_tag "Delete" %>
+<% end %>

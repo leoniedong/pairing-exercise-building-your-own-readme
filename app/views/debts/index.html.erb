@@ -1,0 +1,8 @@
+<h3>The Lannisters owe these people money:</h3>
+<ul>
+<% @debts.each do |debt| %>
+<li><%= link_to "#{debt.name}", debt_path(debt) %></li>
+<% end %>
+</ul>
+But that's ok, because<br>
+<b>A Lannister always pays his debts.</b>
